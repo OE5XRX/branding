@@ -1,6 +1,20 @@
 {% comment %} OE5XRX brand — self-hosted IBM Plex + theme-color. Canonical: OE5XRX/branding. {% endcomment %}
 <meta name="theme-color" content="#123B54">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
+<script>
+  {% comment %} Pre-paint: apply saved/OS color scheme before first render to avoid a flash. {% endcomment %}
+  (function () {
+    try {
+      var s = localStorage.getItem('oe5xrx-theme');
+      var dark = s === 'dark' || (s !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) {
+        var l = document.querySelector('link[rel="stylesheet"][href*="just-the-docs-"]:not(#jtd-head-nav-stylesheet)');
+        if (l) { l.setAttribute('href', l.getAttribute('href').replace(/just-the-docs-[a-z0-9-]+\.css/i, 'just-the-docs-oe5xrx-dark.css')); }
+        document.documentElement.setAttribute('data-oe5xrx-theme', 'dark');
+      }
+    } catch (e) {}
+  })();
+</script>
 <style>
   @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400;
     font-display: swap; src: url("{{ '/assets/fonts/IBMPlexSans-Regular.woff2' | relative_url }}") format("woff2"); }

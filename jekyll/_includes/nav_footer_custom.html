@@ -1,0 +1,49 @@
+{% comment %} OE5XRX brand — light/dark theme toggle. Canonical: OE5XRX/branding. {% endcomment %}
+<button type="button" class="oe5xrx-theme-toggle" aria-pressed="false" aria-label="Farbschema hell/dunkel umschalten">
+  <span class="oe5xrx-theme-toggle__icon" aria-hidden="true">◐</span>
+  <span class="oe5xrx-theme-toggle__label">Dunkel</span>
+</button>
+<script>
+  (function () {
+    var KEY = 'oe5xrx-theme';
+    function schemeLink() {
+      return document.querySelector('link[rel="stylesheet"][href*="just-the-docs-"]:not(#jtd-head-nav-stylesheet)');
+    }
+    function isDark() {
+      var s = localStorage.getItem(KEY);
+      if (s === 'dark') return true;
+      if (s === 'light') return false;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function apply(dark) {
+      var name = dark ? 'oe5xrx-dark' : 'default';
+      var l = schemeLink();
+      if (l) {
+        l.setAttribute('href', l.getAttribute('href').replace(/just-the-docs-[a-z0-9-]+\.css/i, 'just-the-docs-' + name + '.css'));
+      }
+      document.documentElement.setAttribute('data-oe5xrx-theme', dark ? 'dark' : 'light');
+      var b = document.querySelector('.oe5xrx-theme-toggle');
+      if (b) {
+        b.setAttribute('aria-pressed', String(dark));
+        var lbl = b.querySelector('.oe5xrx-theme-toggle__label');
+        if (lbl) { lbl.textContent = dark ? 'Hell' : 'Dunkel'; }
+      }
+    }
+    function init() {
+      apply(isDark());
+      var b = document.querySelector('.oe5xrx-theme-toggle');
+      if (b) {
+        b.addEventListener('click', function () {
+          var d = !isDark();
+          localStorage.setItem(KEY, d ? 'dark' : 'light');
+          apply(d);
+        });
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        if (!localStorage.getItem(KEY)) { apply(e.matches); }
+      });
+    }
+    if (document.readyState !== 'loading') { init(); }
+    else { document.addEventListener('DOMContentLoaded', init); }
+  })();
+</script>

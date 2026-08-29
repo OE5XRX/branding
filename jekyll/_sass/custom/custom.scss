@@ -1,0 +1,43 @@
+// OE5XRX brand — custom rules layered on top of just-the-docs.
+// Canonical source: OE5XRX/branding jekyll/. Do not edit in consumers.
+// Imported by JTD after the color scheme, so $link-color etc. are scheme-aware
+// (marine in light, cyan in dark) and everything here adapts per theme.
+
+// Logo: JTD renders .site-logo as a <div> with a background-image. currentColor
+// does not apply to a background SVG, so recolor it via CSS mask → the logo
+// takes the scheme's link color instead of rendering black/invisible on dark.
+// URL is relative to the built CSS (assets/css/…) → resolves under any baseurl.
+.site-logo {
+  background-image: none !important;
+  background-color: $link-color;
+  -webkit-mask: url("../oe5xrx-logo.svg") no-repeat left center;
+          mask: url("../oe5xrx-logo.svg") no-repeat left center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+
+// Theme toggle button (markup in _includes/nav_footer_custom.html).
+.oe5xrx-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0.5rem 0 0;
+  padding: 0.35em 0.75em;
+  font-family: inherit;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: $body-text-color;
+  background-color: $sidebar-color;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.oe5xrx-theme-toggle:hover,
+.oe5xrx-theme-toggle:focus-visible {
+  color: $link-color;
+  border-color: $link-color;
+}
+.oe5xrx-theme-toggle__icon {
+  font-size: 1em;
+  line-height: 1;
+}

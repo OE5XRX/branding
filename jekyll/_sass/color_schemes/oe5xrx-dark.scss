@@ -1,0 +1,23 @@
+// OE5XRX brand color scheme (Palette C, dark) for just-the-docs.
+// Do not edit in consumer repos — canonical source: OE5XRX/branding jekyll/.
+// Explicit variable assignments (same pattern as the light scheme) so the
+// visible surfaces are brand-dark; JTD !default fills the rest.
+
+$body-background-color:    #0A1219;
+$sidebar-color:            #0F1C28;
+$search-background-color:  #0F1C28;
+$table-background-color:   #0F1C28;
+$code-background-color:    #0F1C28;
+$feedback-color:           lighten(#0F1C28, 4%);
+
+$body-text-color:          #D8ECF5;
+$body-heading-color:       #D8ECF5;
+$nav-child-link-color:     #7AAFCA;
+$link-color:               #3AC6D6;
+$btn-primary-color:        #3AC6D6;
+$base-button-color:        #0F1C28;
+
+$border-color:             #1A2D3D;
+
+$body-font-family:  "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+$mono-font-family:  "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;

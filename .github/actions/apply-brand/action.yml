@@ -15,12 +15,15 @@ runs:
         set -euo pipefail
         ROOT="$(cd "$GITHUB_ACTION_PATH/../../.." && pwd)"   # branding-Repo-Root
         # DEST kommt jetzt aus der Umgebung (env), nicht aus Expression-Interpolation
-        mkdir -p "$DEST/_sass/color_schemes" "$DEST/_includes" "$DEST/assets/fonts"
-        cp "$ROOT/jekyll/_sass/color_schemes/oe5xrx.scss" "$DEST/_sass/color_schemes/"
+        mkdir -p "$DEST/_sass/color_schemes" "$DEST/_sass/custom" "$DEST/_includes" "$DEST/assets/fonts" "$DEST/assets/css"
+        cp "$ROOT"/jekyll/_sass/color_schemes/oe5xrx*.scss "$DEST/_sass/color_schemes/"
+        cp "$ROOT/jekyll/_sass/custom/custom.scss"        "$DEST/_sass/custom/"
         cp "$ROOT/jekyll/_includes/head_custom.html"      "$DEST/_includes/"
+        cp "$ROOT/jekyll/_includes/nav_footer_custom.html" "$DEST/_includes/"
+        cp "$ROOT/jekyll/assets/css/just-the-docs-oe5xrx-dark.scss" "$DEST/assets/css/"
         cp "$ROOT"/jekyll/assets/fonts/*.woff2            "$DEST/assets/fonts/"
         cp "$ROOT/logo/oe5xrx-horizontal.svg"             "$DEST/assets/oe5xrx-logo.svg"
         cp "$ROOT/export/favicon.ico"                     "$DEST/favicon.ico"
         cp "$ROOT/export/apple-touch-icon-180.png"        "$DEST/apple-touch-icon.png"
         echo "OE5XRX brand layer applied to '$DEST':"
-        ls -R "$DEST/_sass/color_schemes" "$DEST/_includes" "$DEST/assets/fonts" "$DEST/assets/oe5xrx-logo.svg" "$DEST/favicon.ico" "$DEST/apple-touch-icon.png"
+        ls -R "$DEST/_sass" "$DEST/_includes" "$DEST/assets/css" "$DEST/assets/fonts" "$DEST/assets/oe5xrx-logo.svg" "$DEST/favicon.ico" "$DEST/apple-touch-icon.png"
