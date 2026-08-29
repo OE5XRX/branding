@@ -3,13 +3,13 @@
      stroke-linecap="round" stroke-linejoin="round">
     <!-- Wellen: klein, im oberen Drittel um den Apex (x=64, y=51), zwei klar getrennte Bögen je Seite -->
     <!-- innerer Bogen links: von y=44 bis y=58 (dy=14), rx=10 -->
-    <path d="M55 43 a11 11 0 0 0 0 15"/>
+    <path d="M52 43 a11 11 0 0 0 0 15"/>
     <!-- äußerer Bogen links: von y=38 bis y=64 (dy=26), rx=16 -->
-    <path d="M46 37 a18 18 0 0 0 0 28"/>
+    <path d="M43 37 a18 18 0 0 0 0 28"/>
     <!-- innerer Bogen rechts -->
-    <path d="M73 43 a11 11 0 0 1 0 15"/>
+    <path d="M76 43 a11 11 0 0 1 0 15"/>
     <!-- äußerer Bogen rechts -->
-    <path d="M82 37 a18 18 0 0 1 0 28"/>
+    <path d="M85 37 a18 18 0 0 1 0 28"/>
     <!-- Mast-Beine: schlankes, hohes Dreieck (64,52) → (46,108) / (82,108), Basisbreite 36 (Verhältnis 0.64 wie Original) -->
     <path d="M64 52 L43 108"/>
     <path d="M64 52 L85 108"/>
