@@ -16,6 +16,6 @@ Consumer-Setup (in `_config.yml`):
 
 Und im Build-Workflow vor `jekyll build`:
 
-    - uses: OE5XRX/branding/.github/actions/apply-brand@v0.1.0
+    - uses: OE5XRX/branding/.github/actions/apply-brand@v0.1.1
 
 Nicht in Consumer-Repos editieren — hier ist die Single Source.
