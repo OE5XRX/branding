@@ -27,3 +27,23 @@
   @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 600;
     font-display: swap; src: url("{{ '/assets/fonts/IBMPlexMono-SemiBold.woff2' | relative_url }}") format("woff2"); }
 </style>
+{% if site.mermaid %}
+{% comment %} Live re-render Mermaid diagrams on theme toggle. Imports the SAME mermaid
+   module URL JTD uses (ES-module singleton) and exposes a global the toggle calls.
+   Sources are captured pre-render by mermaid_config.js into data-mmd-src. {% endcomment %}
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.esm.min.mjs";
+  window.__oe5xrxRerenderMermaid = async function (theme) {
+    try {
+      var els = document.querySelectorAll(".language-mermaid[data-mmd-src]");
+      if (!els.length) { return; }
+      for (var i = 0; i < els.length; i++) {
+        els[i].removeAttribute("data-processed");
+        els[i].innerHTML = els[i].getAttribute("data-mmd-src");
+      }
+      mermaid.initialize({ startOnLoad: false, theme: theme });
+      await mermaid.run({ querySelector: ".language-mermaid" });
+    } catch (e) {}
+  };
+</script>
+{% endif %}

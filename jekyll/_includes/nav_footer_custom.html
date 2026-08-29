@@ -33,6 +33,7 @@
         var lbl = buttons[i].querySelector('.oe5xrx-theme-toggle__label');
         if (lbl) { lbl.textContent = dark ? 'Hell' : 'Dunkel'; }
       }
+      if (window.__oe5xrxRerenderMermaid) { window.__oe5xrxRerenderMermaid(dark ? 'dark' : 'default'); }
     }
     function onClick() {
       var d = !isDark();
