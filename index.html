@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="type/fonts.css">
   <link rel="stylesheet" href="color/tokens.css">
   <link rel="stylesheet" href="site.css">
+  <link rel="icon" type="image/svg+xml" href="logo/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="export/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="export/apple-touch-icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#123B54">
 </head>
 <body>
 
@@ -221,6 +226,21 @@
       </div>
       <div class="logo-downloads">
         <a href="logo/oe5xrx-horizontal.svg" download>SVG (currentColor)</a>
+      </div>
+    </div>
+
+    <!-- Favicon -->
+    <div class="logo-variant">
+      <p class="logo-variant-name">Favicon &amp; Raster Exports</p>
+      <div class="logo-downloads">
+        <a href="logo/favicon.svg" download>favicon.svg</a>
+        <a href="export/favicon.ico" download>favicon.ico</a>
+        <a href="export/favicon-16.png" download>16&times;16 PNG</a>
+        <a href="export/favicon-32.png" download>32&times;32 PNG</a>
+        <a href="export/favicon-48.png" download>48&times;48 PNG</a>
+        <a href="export/apple-touch-icon-180.png" download>180&times;180 Apple Touch</a>
+        <a href="export/pwa-192.png" download>192&times;192 PWA</a>
+        <a href="export/pwa-512.png" download>512&times;512 PWA</a>
       </div>
     </div>
 
@@ -674,11 +694,152 @@
   <section id="usage" class="section">
     <div class="section-header">
       <h2>Do / Don&rsquo;t</h2>
-      <span class="badge pending">Task 11</span>
+      <span class="badge done">Done</span>
     </div>
-    <div class="placeholder-content">
-      Logo usage rules — coming in Task 11.
+
+    <p class="type-intro">
+      Logo usage rules for all OE5XRX brand assets.
+    </p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2.5rem;">
+
+      <!-- DO column -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:1.5rem;">
+        <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--success);margin-bottom:1.25rem;">Do</h3>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1rem;">
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--success);font-weight:700;flex-shrink:0;">&#10003;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Use <code style="font-family:var(--font-mono);font-size:0.78rem;">currentColor</code></strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">The logo inherits the surrounding text colour. It adapts to light and dark contexts automatically &mdash; no manual colour overrides needed.</span>
+            </div>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--success);font-weight:700;flex-shrink:0;">&#10003;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Maintain clear space</strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">Leave a margin of at least the height of the &ldquo;O&rdquo; in the wordmark around all sides of the logo.</span>
+            </div>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--success);font-weight:700;flex-shrink:0;">&#10003;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Respect minimum size</strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">Mark: minimum ~24&nbsp;px height. For favicons and anything 32&nbsp;px or smaller, use <code style="font-family:var(--font-mono);font-size:0.78rem;">favicon.ico</code> instead of the full SVG.</span>
+            </div>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--success);font-weight:700;flex-shrink:0;">&#10003;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Check contrast</strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">Ensure sufficient contrast between logo and background. Use the brand primary on white or the white variant on dark backgrounds.</span>
+            </div>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--success);font-weight:700;flex-shrink:0;">&#10003;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Inline SVG with <code style="font-family:var(--font-mono);font-size:0.78rem;">color:</code> CSS</strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">Embed the mark inline and set colour via CSS <code style="font-family:var(--font-mono);font-size:0.78rem;">color</code> property for full theme integration.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DON'T column -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:1.5rem;">
+        <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--error);margin-bottom:1.25rem;">Don&rsquo;t</h3>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1rem;">
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--error);font-weight:700;flex-shrink:0;">&#10007;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Add a border or frame</strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">The logo is intentionally borderless. Adding a box or rounded container changes the visual weight and breaks the brand language.</span>
+            </div>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--error);font-weight:700;flex-shrink:0;">&#10007;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Apply arbitrary colours</strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">Only <code style="font-family:var(--font-mono);font-size:0.78rem;">currentColor</code>, brand primary <code style="font-family:var(--font-mono);font-size:0.78rem;">#123B54</code>, or white are approved. Do not fill with other colours.</span>
+            </div>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--error);font-weight:700;flex-shrink:0;">&#10007;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Distort or rotate</strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">Scale uniformly. Do not squeeze, stretch, skew, or rotate the logo or any of its components.</span>
+            </div>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--error);font-weight:700;flex-shrink:0;">&#10007;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Place mark on busy backgrounds</strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">Avoid placing the mark directly on textured or photographic backgrounds without a solid backing surface to ensure legibility.</span>
+            </div>
+          </li>
+          <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+            <span style="color:var(--error);font-weight:700;flex-shrink:0;">&#10007;</span>
+            <div>
+              <strong style="font-size:0.83rem;color:var(--text);display:block;margin-bottom:0.2rem;">Use full SVG below 32&nbsp;px</strong>
+              <span style="font-size:0.78rem;color:var(--muted);line-height:1.5;">The multi-path SVG loses legibility at small sizes. Use <code style="font-family:var(--font-mono);font-size:0.78rem;">favicon.ico</code> or the raster PNGs instead.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <!-- Inline currentColor example -->
+    <div class="subsection">
+      <h3>currentColor in practice</h3>
+      <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin-bottom:1.25rem;">
+        The mark embedded inline next to text &mdash; it picks up the parent <code style="font-family:var(--font-mono)">color</code> automatically:
+      </p>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--text);">
+          <svg style="width:20px;height:20px;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
+              <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
+              <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
+              <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
+              <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
+            </g>
+            <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
+            <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
+          </svg>
+          <span style="font-size:0.88rem;">Body text colour &mdash; <code style="font-family:var(--font-mono);font-size:0.78rem;">color: var(--text)</code></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--primary);">
+          <svg style="width:20px;height:20px;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
+              <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
+              <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
+              <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
+              <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
+            </g>
+            <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
+            <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
+          </svg>
+          <span style="font-size:0.88rem;">Primary brand colour &mdash; <code style="font-family:var(--font-mono);font-size:0.78rem;">color: var(--primary)</code></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;background:var(--primary);padding:0.5rem 0.75rem;border-radius:3px;color:#fff;width:fit-content;">
+          <svg style="width:20px;height:20px;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
+              <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
+              <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
+              <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
+              <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
+            </g>
+            <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
+            <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
+          </svg>
+          <span style="font-size:0.88rem;">White on primary bg &mdash; <code style="font-family:var(--font-mono);font-size:0.78rem;">color: #fff</code></span>
+        </div>
+      </div>
+    </div>
+
   </section>
 
 </main>
