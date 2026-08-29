@@ -20,6 +20,7 @@ runs:
         cp "$ROOT/jekyll/_sass/custom/custom.scss"        "$DEST/_sass/custom/"
         cp "$ROOT/jekyll/_includes/head_custom.html"      "$DEST/_includes/"
         cp "$ROOT/jekyll/_includes/nav_footer_custom.html" "$DEST/_includes/"
+        cp "$ROOT/jekyll/_includes/mermaid_config.js"     "$DEST/_includes/"
         cp "$ROOT/jekyll/assets/css/just-the-docs-oe5xrx-dark.scss" "$DEST/assets/css/"
         cp "$ROOT"/type/fonts/*.woff2                     "$DEST/assets/fonts/"
         cp "$ROOT/logo/oe5xrx-horizontal.svg"             "$DEST/assets/oe5xrx-logo.svg"
