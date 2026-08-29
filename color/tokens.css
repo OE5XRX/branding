@@ -1,0 +1,55 @@
+/* OE5XRX Design Tokens — Placeholder palette (Task 6 will fill real values) */
+
+:root {
+  --bg:      #ffffff;
+  --surface: #f4f4f2;
+  --text:    #1a1a1a;
+  --muted:   #6b6b6b;
+  --primary: #1B4D68;
+  --accent:  #1B4D68;
+  --border:  #dcdcda;
+  --success: #2e7d32;
+  --warn:    #b26a00;
+  --error:   #c62828;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:      #111418;
+    --surface: #1a1f26;
+    --text:    #e8e8e8;
+    --muted:   #9aa4ad;
+    --primary: #5fb3c9;
+    --accent:  #5fb3c9;
+    --border:  #2a313a;
+    --success: #66bb6a;
+    --warn:    #ffa726;
+    --error:   #ef5350;
+  }
+}
+
+[data-theme="dark"] {
+  --bg:      #111418;
+  --surface: #1a1f26;
+  --text:    #e8e8e8;
+  --muted:   #9aa4ad;
+  --primary: #5fb3c9;
+  --accent:  #5fb3c9;
+  --border:  #2a313a;
+  --success: #66bb6a;
+  --warn:    #ffa726;
+  --error:   #ef5350;
+}
+
+[data-theme="light"] {
+  --bg:      #ffffff;
+  --surface: #f4f4f2;
+  --text:    #1a1a1a;
+  --muted:   #6b6b6b;
+  --primary: #1B4D68;
+  --accent:  #1B4D68;
+  --border:  #dcdcda;
+  --success: #2e7d32;
+  --warn:    #b26a00;
+  --error:   #c62828;
+}

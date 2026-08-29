@@ -1,0 +1,396 @@
+/* OE5XRX Branding Guideline — Site layout */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Code", "Fira Code", Menlo, monospace;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── Site header ─────────────────────────────────────────────────────────── */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .wordmark {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.site-header .wordmark span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.35rem 0.75rem;
+  font: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+#theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ── Layout ──────────────────────────────────────────────────────────────── */
+
+.site-nav {
+  position: fixed;
+  top: 57px;
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 57px);
+  padding: 2rem 0;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  overflow-y: auto;
+}
+
+.site-nav ul {
+  list-style: none;
+}
+
+.site-nav li a {
+  display: block;
+  padding: 0.45rem 2rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.12s;
+}
+
+.site-nav li a:hover,
+.site-nav li a.active {
+  color: var(--primary);
+}
+
+.site-nav .nav-label {
+  padding: 1.5rem 2rem 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.site-main {
+  margin-left: 200px;
+  padding: 3rem 3.5rem;
+  max-width: 1100px;
+}
+
+/* ── Section structure ───────────────────────────────────────────────────── */
+
+.section {
+  margin-bottom: 5rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-header h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.section-header .badge {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 2px;
+}
+
+.section-header .badge.done {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.section-header .badge.pending {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+
+.subsection {
+  margin-bottom: 3.5rem;
+}
+
+.subsection h3 {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+/* ── Logo variant grid ───────────────────────────────────────────────────── */
+
+.logo-variant {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-variant:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.logo-variant-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.swatch-row {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.swatch-light,
+.swatch-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 4px;
+  min-width: 180px;
+  min-height: 120px;
+  flex: 1;
+}
+
+/* Fixed explicit backgrounds — these are demos of the logo on specific bg colors,
+   independent of current page theme */
+.swatch-light {
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #dcdcda;
+}
+
+.swatch-dark {
+  background: #111418;
+  color: #e8e8e8;
+  border: 1px solid #2a313a;
+}
+
+/* SVGs inside swatches inherit color via currentColor */
+.swatch-light svg,
+.swatch-dark svg {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+
+/* Mark variant is square-ish */
+.swatch-light.mark svg,
+.swatch-dark.mark svg {
+  max-width: 80px;
+}
+
+/* Wordmark is wide */
+.swatch-light.wordmark svg,
+.swatch-dark.wordmark svg {
+  max-width: 220px;
+}
+
+.swatch-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.swatch-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+/* ── Logo download links ─────────────────────────────────────────────────── */
+
+.logo-downloads {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.logo-downloads a {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.logo-downloads a:hover {
+  border-color: var(--primary);
+  background: var(--surface);
+}
+
+/* ── Original vs Vector comparison ─────────────────────────────────────────── */
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparison-item {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.comparison-item-header {
+  padding: 0.6rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comparison-item-header .format-badge {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.comparison-item-body {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  background: var(--bg);
+}
+
+.comparison-item-body img {
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+.comparison-item-body svg {
+  max-width: 180px;
+  max-height: 140px;
+  width: 100%;
+  height: auto;
+  color: var(--text);
+}
+
+.comparison-note {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── Placeholder sections ────────────────────────────────────────────────── */
+
+.placeholder-content {
+  padding: 3rem 2rem;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .site-nav {
+    display: none;
+  }
+
+  .site-main {
+    margin-left: 0;
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .swatch-row {
+    flex-direction: column;
+  }
+
+  .site-header {
+    padding: 1rem 1.25rem;
+  }
+}
