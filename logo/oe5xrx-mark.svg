@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OE5XRX">
+  <g fill="none" stroke="currentColor" stroke-width="6.5"
+     stroke-linecap="round" stroke-linejoin="round">
+    <!-- Wellen links (nach links gewölbt, Apex bei x=64, y=55) -->
+    <!-- innerer Bogen links: von y=44 bis y=66 (dy=22), rx=14 -->
+    <path d="M57 44 a14 14 0 0 0 0 22"/>
+    <!-- äußerer Bogen links: von y=32 bis y=76 (dy=44), rx=25 -->
+    <path d="M46 32 a25 25 0 0 0 0 44"/>
+    <!-- innerer Bogen rechts -->
+    <path d="M71 44 a14 14 0 0 1 0 22"/>
+    <!-- äußerer Bogen rechts -->
+    <path d="M82 32 a25 25 0 0 1 0 44"/>
+    <!-- Mast-Beine: (64,55) → (43,105) und (64,55) → (85,105) -->
+    <path d="M64 55 L43 105"/>
+    <path d="M64 55 L85 105"/>
+    <!-- Basis waagrecht -->
+    <path d="M41 105 L87 105"/>
+    <!-- obere Querstrebe (auf Mast-Beinen bei y=75):
+         Links: 64 - 21*(20/50) = 55.6
+         Rechts: 64 + 21*(20/50) = 72.4 -->
+    <path d="M55.6 75 L72.4 75"/>
+    <!-- X-Kreuzverstrebung -->
+    <path d="M55.6 75 L85 105"/>
+    <path d="M72.4 75 L43 105"/>
+  </g>
+  <!-- Apex-Knoten -->
+  <circle cx="64" cy="55" r="4.5" fill="currentColor"/>
+  <!-- Blitz (gefüllte Zickzack-Fläche) -->
+  <path d="M68 12 L60 30 L66 30 L61 51 L77 27 L69 27 Z" fill="currentColor"/>
+</svg>
