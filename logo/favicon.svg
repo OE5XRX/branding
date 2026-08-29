@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OE5XRX">
+  <g fill="none" stroke="currentColor" stroke-width="6"
+     stroke-linecap="round" stroke-linejoin="round">
+    <!-- Wellen: klein, im oberen Drittel um den Apex (x=64, y=51), zwei klar getrennte Bögen je Seite -->
+    <!-- innerer Bogen links: von y=44 bis y=58 (dy=14), rx=10 -->
+    <path d="M58 44 a10 10 0 0 0 0 14"/>
+    <!-- äußerer Bogen links: von y=38 bis y=64 (dy=26), rx=16 -->
+    <path d="M50 38 a16 16 0 0 0 0 26"/>
+    <!-- innerer Bogen rechts -->
+    <path d="M70 44 a10 10 0 0 1 0 14"/>
+    <!-- äußerer Bogen rechts -->
+    <path d="M78 38 a16 16 0 0 1 0 26"/>
+    <!-- Mast-Beine: schlankes, hohes Dreieck (64,52) → (51,108) / (77,108) -->
+    <path d="M64 52 L51 108"/>
+    <path d="M64 52 L77 108"/>
+    <!-- Basis waagrecht -->
+    <path d="M49 108 L79 108"/>
+    <!-- obere Querstrebe (auf den Beinen bei y=74):
+         Beinsteigung: dx/dy = 13/56
+         Links: 64 - 13*(74-52)/56 = 64 - 5.11 = 58.89
+         Rechts: 64 + 5.11 = 69.11 -->
+    <path d="M58.9 74 L69.1 74"/>
+    <!-- X-Kreuzverstrebung: von Querstrebe zur gegenüberliegenden Basis -->
+    <path d="M58.9 74 L77 108"/>
+    <path d="M69.1 74 L51 108"/>
+  </g>
+  <!-- Apex-Knoten: klar an der Mastspitze -->
+  <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
+  <!-- Blitz (kompakt, oben-mittig zentriert) -->
+  <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
+</svg>
