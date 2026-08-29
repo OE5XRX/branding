@@ -9,6 +9,9 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  /* Header height: 2 × 1.25rem vertical padding + ~0.9rem line + 1px border.
+     Kept in one place so the sticky sidebar offset stays in sync. */
+  --header-h: calc(2.5rem + 0.9rem * 1.6 + 1px);
 }
 
 body {
@@ -68,10 +71,10 @@ body {
 
 .site-nav {
   position: fixed;
-  top: 57px;
+  top: var(--header-h);
   left: 0;
   width: 200px;
-  height: calc(100vh - 57px);
+  height: calc(100vh - var(--header-h));
   padding: 2rem 0;
   border-right: 1px solid var(--border);
   background: var(--surface);

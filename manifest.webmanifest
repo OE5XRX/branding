@@ -2,8 +2,10 @@
   "name": "OE5XRX Branding",
   "short_name": "OE5XRX",
   "icons": [
-    { "src": "export/pwa-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "export/pwa-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "export/pwa-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "export/pwa-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "export/pwa-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "export/pwa-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "theme_color": "#123B54",
   "background_color": "#0A1219",

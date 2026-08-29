@@ -1,7 +1,4 @@
 /* OE5XRX Branding — Typography: IBM Plex Sans + IBM Plex Mono (locked Task 9) */
 
-/* IBM Plex Sans: weights 400, 600, 700 — body and headings */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
-
-/* IBM Plex Mono: weights 400, 600 — code, frequencies, technical data */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
+/* IBM Plex Sans 400/600/700 (body + headings) + IBM Plex Mono 400/600 (code, frequencies, technical data) — single combined import */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
