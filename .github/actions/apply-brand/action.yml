@@ -21,7 +21,7 @@ runs:
         cp "$ROOT/jekyll/_includes/head_custom.html"      "$DEST/_includes/"
         cp "$ROOT/jekyll/_includes/nav_footer_custom.html" "$DEST/_includes/"
         cp "$ROOT/jekyll/assets/css/just-the-docs-oe5xrx-dark.scss" "$DEST/assets/css/"
-        cp "$ROOT"/jekyll/assets/fonts/*.woff2            "$DEST/assets/fonts/"
+        cp "$ROOT"/type/fonts/*.woff2                     "$DEST/assets/fonts/"
         cp "$ROOT/logo/oe5xrx-horizontal.svg"             "$DEST/assets/oe5xrx-logo.svg"
         cp "$ROOT/export/favicon.ico"                     "$DEST/favicon.ico"
         cp "$ROOT/export/apple-touch-icon-180.png"        "$DEST/apple-touch-icon.png"

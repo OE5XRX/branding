@@ -1,4 +1,14 @@
-/* OE5XRX Branding — Typography: IBM Plex Sans + IBM Plex Mono (locked Task 9) */
+/* OE5XRX Branding — Typography: IBM Plex Sans + IBM Plex Mono (self-hosted, OFL).
+   Self-hosted (no external CDN request) — consistent with the Jekyll brand layer
+   and privacy-friendly (GDPR). WOFF2 live in ./fonts/ (canonical brand fonts). */
 
-/* IBM Plex Sans 400/600/700 (body + headings) + IBM Plex Mono 400/600 (code, frequencies, technical data) — single combined import */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400;
+  font-display: swap; src: url("fonts/IBMPlexSans-Regular.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600;
+  font-display: swap; src: url("fonts/IBMPlexSans-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 700;
+  font-display: swap; src: url("fonts/IBMPlexSans-Bold.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400;
+  font-display: swap; src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 600;
+  font-display: swap; src: url("fonts/IBMPlexMono-SemiBold.woff2") format("woff2"); }

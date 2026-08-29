@@ -3,6 +3,10 @@
 // Explicit variable assignments (same pattern as the light scheme) so the
 // visible surfaces are brand-dark; JTD !default fills the rest.
 
+// Base on JTD dark scheme so all defaults (incl. code syntax highlighting) are dark;
+// brand overrides below then set the Palette-C accents.
+@import "./color_schemes/dark";
+
 $body-background-color:    #0A1219;
 $sidebar-color:            #0F1C28;
 $search-background-color:  #0F1C28;

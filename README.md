@@ -10,8 +10,51 @@ Live guideline: **https://oe5xrx.org/branding/**
 |------|----------|
 | `logo/` | Theme-aware SVGs — `currentColor`, borderless |
 | `color/` | `tokens.css` (CSS custom properties), `tokens.json` (source of truth) |
-| `type/` | Font CSS (`fonts.css`) |
+| `type/` | `fonts.css` + `fonts/` — self-hosted IBM Plex WOFF2 (canonical brand fonts) |
 | `export/` | Raster exports: favicon ICO/PNG, Apple Touch, PWA icons |
+| `jekyll/` | Brand layer for `just-the-docs` sites — color schemes, `head_custom`, toggle |
+| `.github/actions/apply-brand/` | Composite action that installs the brand layer into a consumer site |
+| `index.html` | Live guideline / preview (served at the Pages URL above) |
+
+## Consuming in Jekyll sites (`just-the-docs`)
+
+The brand layer (colours, self-hosted fonts, logo, favicon/apple-touch, light+dark
+with an auto/toggle) is delivered by a **composite GitHub Action**, pinned to a
+release tag (SRCREV-style — bump the tag to roll out a change):
+
+```yaml
+# .github/workflows/…  — before `bundle exec jekyll build`
+- uses: OE5XRX/branding/.github/actions/apply-brand@v0.2.3
+  # with: { dest: doc }   # only if the Jekyll source root is a subdir (e.g. HW-Module-CI)
+```
+
+```yaml
+# _config.yml
+color_scheme: oe5xrx
+logo: "/assets/oe5xrx-logo.svg"
+favicon_ico: "/favicon.ico"
+```
+
+```gitignore
+# .gitignore — fetched at build, never commit
+/_sass/color_schemes/oe5xrx*.scss
+/_sass/custom/
+/_includes/head_custom.html
+/_includes/nav_footer_custom.html
+/assets/css/just-the-docs-oe5xrx-dark.scss
+/assets/fonts/
+/assets/oe5xrx-logo.svg
+/favicon.ico
+/apple-touch-icon.png
+```
+
+The action copies everything into the site source; `just-the-docs` stays the gem
+theme. **Dark mode is automatic** (follows `prefers-color-scheme`) with a toggle in
+the sidebar footer — no consumer code required. The `dest` input (default `.`)
+points at the Jekyll source root.
+
+**Versioning:** pin a concrete tag. Bumping the tag is how a brand change reaches a
+consumer — reviewable, reproducible, one line.
 
 ## Color Tokens — Palette C (Marine + Cyan)
 
@@ -34,10 +77,10 @@ Light values are `:root` defaults; dark values apply under `prefers-color-scheme
 
 | Role | Family | Weights | Source |
 |------|--------|---------|--------|
-| Heading / Body | IBM Plex Sans | 400, 600, 700 | Google Fonts (OFL) |
-| Code / Technical | IBM Plex Mono | 400, 600 | Google Fonts (OFL) |
+| Heading / Body | IBM Plex Sans | 400, 600, 700 | self-hosted WOFF2 (`type/fonts/`) |
+| Code / Technical | IBM Plex Mono | 400, 600 | self-hosted WOFF2 (`type/fonts/`) |
 
-IBM Plex is released under the SIL Open Font License 1.1 — free for commercial and non-commercial use.
+IBM Plex is released under the SIL Open Font License 1.1 — free for commercial and non-commercial use. Fonts are **self-hosted** (no external CDN request) for privacy/GDPR.
 
 ## Using tokens.css
 
@@ -88,7 +131,6 @@ Switching theme context (light/dark) is handled entirely by the parent `color` v
 | `logo/oe5xrx-horizontal.svg` | Horizontal lockup, `currentColor` |
 | `logo/oe5xrx-mark.svg` | Mark only, `currentColor` |
 | `logo/oe5xrx-wordmark.svg` | Wordmark only, `currentColor` |
-| `logo/favicon.svg` | Favicon-optimised SVG |
 | `export/favicon.ico` | Multi-size ICO (16/32/48 px) |
 | `export/favicon-16.png` | 16×16 raster |
 | `export/favicon-32.png` | 32×32 raster |
