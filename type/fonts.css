@@ -1,14 +1,7 @@
-/* OE5XRX Branding — Typeface Candidates (CDN imports for preview) */
-/* Self-hosting happens at Task 9 once a pairing is chosen.        */
+/* OE5XRX Branding — Typography: IBM Plex Sans + IBM Plex Mono (locked Task 9) */
 
-/* ── Pairing 1: Space Grotesk + IBM Plex Sans + IBM Plex Mono ── */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
-
-/* ── Pairing 2 & 1 shared: IBM Plex Sans + IBM Plex Mono ──────── */
+/* IBM Plex Sans: weights 400, 600, 700 — body and headings */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-/* ── Pairing 3: Fredoka + Inter + JetBrains Mono ──────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+/* IBM Plex Mono: weights 400, 600 — code, frequencies, technical data */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');

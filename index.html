@@ -6,7 +6,6 @@
   <title>OE5XRX Branding</title>
   <link rel="stylesheet" href="type/fonts.css">
   <link rel="stylesheet" href="color/tokens.css">
-  <link rel="stylesheet" href="color/candidates.css">
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -124,7 +123,7 @@
       </div>
       <div class="logo-downloads">
         <a href="logo/oe5xrx-full.svg" download>SVG (currentColor)</a>
-        <a href="logo/oe5xrx-full-petrol.svg" download>SVG (petrol)</a>
+        <a href="logo/oe5xrx-full-primary.svg" download>SVG (primary #123B54)</a>
         <a href="logo/oe5xrx-full-white.svg" download>SVG (white)</a>
       </div>
     </div>
@@ -414,314 +413,162 @@
   <section id="colors" class="section">
     <div class="section-header">
       <h2>Colors</h2>
-      <span class="badge">Candidates A/B/C</span>
+      <span class="badge done">Palette C &mdash; Final</span>
     </div>
 
-    <!-- ── PALETTE A — Petrol-treu ─────────────────────────────────────── -->
-    <div class="pal-direction">
-      <p class="pal-direction-title">A &mdash; Petrol-treu</p>
-      <p class="pal-direction-desc">
-        Original OE5XRX petrol as primary. Warm neutral grays. Accent = primary.
-        Minimal, calm, brand-faithful.
-      </p>
-      <div class="pal-pair">
+    <p class="type-intro">
+      Palette C (Marine + Cyan) &mdash; gew&auml;hlt und festgezogen.
+      Marine primary <code style="font-family:var(--font-mono)">#123B54</code>,
+      Cyan accent, blue-get&ouml;nte Neutrals.
+      Dunkel: Cyan als primary und accent.
+    </p>
 
-        <!-- A light -->
-        <div class="pal-a pal-card">
-          <div class="pal-card-header">A &mdash; Light</div>
-          <div class="pal-swatches">
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#F7F5F2"></div><span class="pal-swatch-name">--bg</span><span class="pal-swatch-hex">#F7F5F2</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#EEEBE6"></div><span class="pal-swatch-name">--surface</span><span class="pal-swatch-hex">#EEEBE6</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#1A1614"></div><span class="pal-swatch-name">--text</span><span class="pal-swatch-hex">#1A1614</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#6B6058"></div><span class="pal-swatch-name">--muted</span><span class="pal-swatch-hex">#6B6058</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#1B4D68"></div><span class="pal-swatch-name">--primary</span><span class="pal-swatch-hex">#1B4D68</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#1B4D68"></div><span class="pal-swatch-name">--accent</span><span class="pal-swatch-hex">#1B4D68</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#D8D3CC"></div><span class="pal-swatch-name">--border</span><span class="pal-swatch-hex">#D8D3CC</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#2E7D32"></div><span class="pal-swatch-name">--success</span><span class="pal-swatch-hex">#2E7D32</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#B26A00"></div><span class="pal-swatch-name">--warn</span><span class="pal-swatch-hex">#B26A00</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#C62828"></div><span class="pal-swatch-name">--error</span><span class="pal-swatch-hex">#C62828</span></div>
+    <!-- ── LIGHT MODE ─────────────────────────────────────────────────────── -->
+    <div class="subsection">
+      <h3>Light Mode</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.5rem;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#F4F7F9;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--bg</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#F4F7F9</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#E8EFF4;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--surface</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#E8EFF4</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#0D1A24;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--text</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#0D1A24</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#526070;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--muted</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#526070</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#123B54;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--primary</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#123B54</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#0F7A87;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--accent</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#0F7A87</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#C8D6E0;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--border</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#C8D6E0</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#1B6B35;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--success</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#1B6B35</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#8A5200;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--warn</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#8A5200</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+          <div style="width:52px;height:52px;border-radius:4px;background:#B02020;border:1px solid rgba(0,0,0,0.12)"></div>
+          <span style="font-size:0.62rem;color:var(--muted);font-family:var(--font-mono)">--error</span>
+          <span style="font-size:0.6rem;color:var(--text);font-family:var(--font-mono)">#B02020</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DARK MODE ──────────────────────────────────────────────────────── -->
+    <div class="subsection">
+      <h3>Dark Mode</h3>
+      <div style="background:#0A1219;border-radius:6px;padding:1.25rem;border:1px solid #1A2D3D;">
+        <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.5rem;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#0A1219;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--bg</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#0A1219</span>
           </div>
-          <div class="pal-demo">
-            <div class="pal-demo-card">
-              <div class="pal-demo-card-header">
-                <svg class="pal-demo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
-                  <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
-                    <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
-                    <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
-                    <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
-                    <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
-                  </g>
-                  <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
-                  <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
-                </svg>
-                <span class="pal-demo-card-title">Remote Station Alpha</span>
-              </div>
-              <p class="pal-demo-body">
-                OE5XRX open-source modular ham radio remote station.
-                2m FM transceiver module, web-based control interface.
-              </p>
-              <div class="pal-demo-footer">
-                <button class="pal-demo-btn">Connect</button>
-                <span class="pal-chip success">Online</span>
-                <span class="pal-chip warn">Low signal</span>
-                <span class="pal-chip error">TX fault</span>
-              </div>
-            </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#0F1C28;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--surface</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#0F1C28</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#D8ECF5;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--text</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#D8ECF5</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#7AAFCA;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--muted</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#7AAFCA</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#3AC6D6;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--primary</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#3AC6D6</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#3AC6D6;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--accent</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#3AC6D6</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#1A2D3D;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--border</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#1A2D3D</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#4DB870;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--success</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#4DB870</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#FFB84D;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--warn</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#FFB84D</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;min-width:64px">
+            <div style="width:52px;height:52px;border-radius:4px;background:#F06060;border:1px solid rgba(255,255,255,0.15)"></div>
+            <span style="font-size:0.62rem;color:#7AAFCA;font-family:var(--font-mono)">--error</span>
+            <span style="font-size:0.6rem;color:#D8ECF5;font-family:var(--font-mono)">#F06060</span>
           </div>
         </div>
+      </div>
+    </div>
 
-        <!-- A dark -->
-        <div class="pal-a dark pal-card">
-          <div class="pal-card-header">A &mdash; Dark</div>
-          <div class="pal-swatches">
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#111418;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--bg</span><span class="pal-swatch-hex">#111418</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#1A1F26;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--surface</span><span class="pal-swatch-hex">#1A1F26</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#E8E4DF;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--text</span><span class="pal-swatch-hex">#E8E4DF</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#9AA4AD;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--muted</span><span class="pal-swatch-hex">#9AA4AD</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#5FB3C9;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--primary</span><span class="pal-swatch-hex">#5FB3C9</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#5FB3C9;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--accent</span><span class="pal-swatch-hex">#5FB3C9</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#2A313A;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--border</span><span class="pal-swatch-hex">#2A313A</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#66BB6A;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--success</span><span class="pal-swatch-hex">#66BB6A</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#FFA726;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--warn</span><span class="pal-swatch-hex">#FFA726</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#EF5350;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--error</span><span class="pal-swatch-hex">#EF5350</span></div>
-          </div>
-          <div class="pal-demo">
-            <div class="pal-demo-card">
-              <div class="pal-demo-card-header">
-                <svg class="pal-demo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
-                  <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
-                    <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
-                    <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
-                    <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
-                    <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
-                  </g>
-                  <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
-                  <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
-                </svg>
-                <span class="pal-demo-card-title">Remote Station Alpha</span>
-              </div>
-              <p class="pal-demo-body">
-                OE5XRX open-source modular ham radio remote station.
-                2m FM transceiver module, web-based control interface.
-              </p>
-              <div class="pal-demo-footer">
-                <button class="pal-demo-btn">Connect</button>
-                <span class="pal-chip success">Online</span>
-                <span class="pal-chip warn">Low signal</span>
-                <span class="pal-chip error">TX fault</span>
-              </div>
-            </div>
-          </div>
+    <!-- ── UI DEMO ────────────────────────────────────────────────────────── -->
+    <div class="subsection">
+      <h3>UI Demo &mdash; tokens in use</h3>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:1rem;max-width:480px;">
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;">
+          <svg style="width:20px;height:20px;color:var(--primary);flex-shrink:0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
+              <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
+              <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
+              <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
+              <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
+            </g>
+            <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
+            <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
+          </svg>
+          <span style="font-size:0.88rem;font-weight:600;color:var(--text)">Remote Station Alpha</span>
         </div>
-
-      </div><!-- /.pal-pair -->
-    </div><!-- /.pal-direction A -->
-
-    <!-- ── PALETTE B — Petrol + Signal-Orange ──────────────────────────── -->
-    <div class="pal-direction">
-      <p class="pal-direction-title">B &mdash; Petrol + Signal-Orange</p>
-      <p class="pal-direction-desc">
-        Petrol primary, warm signal-orange accent for CTA and status highlights.
-        Same neutrals as A. Energetic without leaving the brand family.
-      </p>
-      <div class="pal-pair">
-
-        <!-- B light -->
-        <div class="pal-b pal-card">
-          <div class="pal-card-header">B &mdash; Light</div>
-          <div class="pal-swatches">
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#F7F5F2"></div><span class="pal-swatch-name">--bg</span><span class="pal-swatch-hex">#F7F5F2</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#EEEBE6"></div><span class="pal-swatch-name">--surface</span><span class="pal-swatch-hex">#EEEBE6</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#1A1614"></div><span class="pal-swatch-name">--text</span><span class="pal-swatch-hex">#1A1614</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#6B6058"></div><span class="pal-swatch-name">--muted</span><span class="pal-swatch-hex">#6B6058</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#1B4D68"></div><span class="pal-swatch-name">--primary</span><span class="pal-swatch-hex">#1B4D68</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#C85A0A"></div><span class="pal-swatch-name">--accent</span><span class="pal-swatch-hex">#C85A0A</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#D8D3CC"></div><span class="pal-swatch-name">--border</span><span class="pal-swatch-hex">#D8D3CC</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#2E7D32"></div><span class="pal-swatch-name">--success</span><span class="pal-swatch-hex">#2E7D32</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#B26A00"></div><span class="pal-swatch-name">--warn</span><span class="pal-swatch-hex">#B26A00</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#C62828"></div><span class="pal-swatch-name">--error</span><span class="pal-swatch-hex">#C62828</span></div>
-          </div>
-          <div class="pal-demo">
-            <div class="pal-demo-card">
-              <div class="pal-demo-card-header">
-                <svg class="pal-demo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
-                  <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
-                    <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
-                    <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
-                    <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
-                    <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
-                  </g>
-                  <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
-                  <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
-                </svg>
-                <span class="pal-demo-card-title">Remote Station Alpha</span>
-              </div>
-              <p class="pal-demo-body">
-                OE5XRX open-source modular ham radio remote station.
-                2m FM transceiver module, web-based control interface.
-              </p>
-              <div class="pal-demo-footer">
-                <button class="pal-demo-btn accent">Connect</button>
-                <span class="pal-chip success">Online</span>
-                <span class="pal-chip warn">Low signal</span>
-                <span class="pal-chip error">TX fault</span>
-              </div>
-            </div>
-          </div>
+        <p style="font-size:0.78rem;color:var(--muted);line-height:1.5;margin-bottom:0.75rem;">
+          OE5XRX open-source modular ham radio remote station.
+          2m FM transceiver module, web-based control interface.
+        </p>
+        <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+          <button style="background:var(--primary);color:#fff;border:none;border-radius:3px;padding:0.3rem 0.75rem;font-size:0.75rem;font-family:inherit;letter-spacing:0.06em;cursor:default;">Connect</button>
+          <span style="font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.15rem 0.45rem;border-radius:2px;background:var(--success);color:#fff;">Online</span>
+          <span style="font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.15rem 0.45rem;border-radius:2px;background:var(--warn);color:#fff;">Low signal</span>
+          <span style="font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.15rem 0.45rem;border-radius:2px;background:var(--error);color:#fff;">TX fault</span>
         </div>
-
-        <!-- B dark -->
-        <div class="pal-b dark pal-card">
-          <div class="pal-card-header">B &mdash; Dark</div>
-          <div class="pal-swatches">
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#111418;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--bg</span><span class="pal-swatch-hex">#111418</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#1A1F26;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--surface</span><span class="pal-swatch-hex">#1A1F26</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#E8E4DF;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--text</span><span class="pal-swatch-hex">#E8E4DF</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#9AA4AD;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--muted</span><span class="pal-swatch-hex">#9AA4AD</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#5FB3C9;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--primary</span><span class="pal-swatch-hex">#5FB3C9</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#E8833A;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--accent</span><span class="pal-swatch-hex">#E8833A</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#2A313A;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--border</span><span class="pal-swatch-hex">#2A313A</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#66BB6A;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--success</span><span class="pal-swatch-hex">#66BB6A</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#FFA726;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--warn</span><span class="pal-swatch-hex">#FFA726</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#EF5350;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--error</span><span class="pal-swatch-hex">#EF5350</span></div>
-          </div>
-          <div class="pal-demo">
-            <div class="pal-demo-card">
-              <div class="pal-demo-card-header">
-                <svg class="pal-demo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
-                  <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
-                    <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
-                    <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
-                    <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
-                    <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
-                  </g>
-                  <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
-                  <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
-                </svg>
-                <span class="pal-demo-card-title">Remote Station Alpha</span>
-              </div>
-              <p class="pal-demo-body">
-                OE5XRX open-source modular ham radio remote station.
-                2m FM transceiver module, web-based control interface.
-              </p>
-              <div class="pal-demo-footer">
-                <button class="pal-demo-btn accent">Connect</button>
-                <span class="pal-chip success">Online</span>
-                <span class="pal-chip warn">Low signal</span>
-                <span class="pal-chip error">TX fault</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /.pal-pair -->
-    </div><!-- /.pal-direction B -->
-
-    <!-- ── PALETTE C — Marine + Cyan ───────────────────────────────────── -->
-    <div class="pal-direction">
-      <p class="pal-direction-title">C &mdash; Marine + Cyan</p>
-      <p class="pal-direction-desc">
-        Deeper marine primary (#123B54). Cyan accent, blue-tinted neutrals.
-        Fresher, slightly bolder feel. Accent = primary in dark.
-      </p>
-      <div class="pal-pair">
-
-        <!-- C light -->
-        <div class="pal-c pal-card">
-          <div class="pal-card-header">C &mdash; Light</div>
-          <div class="pal-swatches">
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#F4F7F9"></div><span class="pal-swatch-name">--bg</span><span class="pal-swatch-hex">#F4F7F9</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#E8EFF4"></div><span class="pal-swatch-name">--surface</span><span class="pal-swatch-hex">#E8EFF4</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#0D1A24"></div><span class="pal-swatch-name">--text</span><span class="pal-swatch-hex">#0D1A24</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#526070"></div><span class="pal-swatch-name">--muted</span><span class="pal-swatch-hex">#526070</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#123B54"></div><span class="pal-swatch-name">--primary</span><span class="pal-swatch-hex">#123B54</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#0F7A87"></div><span class="pal-swatch-name">--accent</span><span class="pal-swatch-hex">#0F7A87</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#C8D6E0"></div><span class="pal-swatch-name">--border</span><span class="pal-swatch-hex">#C8D6E0</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#1B6B35"></div><span class="pal-swatch-name">--success</span><span class="pal-swatch-hex">#1B6B35</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#8A5200"></div><span class="pal-swatch-name">--warn</span><span class="pal-swatch-hex">#8A5200</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#B02020"></div><span class="pal-swatch-name">--error</span><span class="pal-swatch-hex">#B02020</span></div>
-          </div>
-          <div class="pal-demo">
-            <div class="pal-demo-card">
-              <div class="pal-demo-card-header">
-                <svg class="pal-demo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
-                  <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
-                    <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
-                    <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
-                    <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
-                    <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
-                  </g>
-                  <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
-                  <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
-                </svg>
-                <span class="pal-demo-card-title">Remote Station Alpha</span>
-              </div>
-              <p class="pal-demo-body">
-                OE5XRX open-source modular ham radio remote station.
-                2m FM transceiver module, web-based control interface.
-              </p>
-              <div class="pal-demo-footer">
-                <button class="pal-demo-btn accent">Connect</button>
-                <span class="pal-chip success">Online</span>
-                <span class="pal-chip warn">Low signal</span>
-                <span class="pal-chip error">TX fault</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- C dark -->
-        <div class="pal-c dark pal-card">
-          <div class="pal-card-header">C &mdash; Dark</div>
-          <div class="pal-swatches">
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#0A1219;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--bg</span><span class="pal-swatch-hex">#0A1219</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#0F1C28;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--surface</span><span class="pal-swatch-hex">#0F1C28</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#D8ECF5;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--text</span><span class="pal-swatch-hex">#D8ECF5</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#7AAFCA;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--muted</span><span class="pal-swatch-hex">#7AAFCA</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#3AC6D6;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--primary</span><span class="pal-swatch-hex">#3AC6D6</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#3AC6D6;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--accent</span><span class="pal-swatch-hex">#3AC6D6</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#1A2D3D;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--border</span><span class="pal-swatch-hex">#1A2D3D</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#4DB870;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--success</span><span class="pal-swatch-hex">#4DB870</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#FFB84D;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--warn</span><span class="pal-swatch-hex">#FFB84D</span></div>
-            <div class="pal-swatch"><div class="pal-swatch-color" style="background:#F06060;border-color:rgba(255,255,255,0.15)"></div><span class="pal-swatch-name">--error</span><span class="pal-swatch-hex">#F06060</span></div>
-          </div>
-          <div class="pal-demo">
-            <div class="pal-demo-card">
-              <div class="pal-demo-card-header">
-                <svg class="pal-demo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
-                  <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M58 44 a10 10 0 0 0 0 14"/><path d="M50 38 a16 16 0 0 0 0 26"/>
-                    <path d="M70 44 a10 10 0 0 1 0 14"/><path d="M78 38 a16 16 0 0 1 0 26"/>
-                    <path d="M64 52 L51 108"/><path d="M64 52 L77 108"/>
-                    <path d="M49 108 L79 108"/><path d="M58.9 74 L69.1 74"/>
-                    <path d="M58.9 74 L77 108"/><path d="M69.1 74 L51 108"/>
-                  </g>
-                  <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
-                  <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
-                </svg>
-                <span class="pal-demo-card-title">Remote Station Alpha</span>
-              </div>
-              <p class="pal-demo-body">
-                OE5XRX open-source modular ham radio remote station.
-                2m FM transceiver module, web-based control interface.
-              </p>
-              <div class="pal-demo-footer">
-                <button class="pal-demo-btn">Connect</button>
-                <span class="pal-chip success">Online</span>
-                <span class="pal-chip warn">Low signal</span>
-                <span class="pal-chip error">TX fault</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /.pal-pair -->
-    </div><!-- /.pal-direction C -->
+      </div>
+    </div>
 
   </section>
 
@@ -729,147 +576,93 @@
   <section id="typography" class="section">
     <div class="section-header">
       <h2>Typography</h2>
-      <span class="badge done">Task 7</span>
+      <span class="badge done">IBM Plex &mdash; Final</span>
     </div>
 
     <p class="type-intro">
-      Drei Schrift-Pairings zum Vergleich — Auswahl trifft Task 8.
-      Jedes Pairing zeigt Heading-, Body- und Mono-Font in typischer Verwendung.
+      Schrift-Pairing 2 (IBM Plex Sans + IBM Plex Mono) &mdash; gew&auml;hlt und festgezogen.
+      Eine Familie, konsistent &uuml;ber alle Gewichte. Sans f&uuml;r Heading und Body,
+      Mono f&uuml;r Frequenzen, Code und technische Daten.
     </p>
 
-    <!-- ── Pairing 1: Space Grotesk + IBM Plex Sans + IBM Plex Mono ── -->
+    <!-- ── IBM Plex Sans — Headings ── -->
     <div class="type-pairing">
       <div class="type-pairing-header">
-        <span class="type-pairing-number">1</span>
+        <span class="type-pairing-number" style="border-color:var(--primary);color:var(--primary)">H</span>
         <div>
-          <p class="type-pairing-name">Technisch (Empfehlung)</p>
+          <p class="type-pairing-name">IBM Plex Sans &mdash; Headings</p>
           <p class="type-pairing-stack">
-            Heading: <strong>Space Grotesk</strong> &mdash;
-            Body: <strong>IBM Plex Sans</strong> &mdash;
-            Mono: <strong>IBM Plex Mono</strong>
+            700 (H1) &mdash; 600 (H2) &mdash; <code style="font-family:var(--font-mono);font-size:0.75rem">'IBM Plex Sans', system-ui, sans-serif</code>
           </p>
         </div>
       </div>
 
       <div class="type-specimen">
         <div class="type-specimen-block">
-          <span class="type-specimen-label">Heading / H1 &mdash; Space Grotesk 700</span>
-          <h1 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2.4rem; line-height: 1.15; color: var(--text);">
+          <span class="type-specimen-label">H1 &mdash; IBM Plex Sans 700 &mdash; 2.4rem</span>
+          <h1 style="font-family:'IBM Plex Sans',system-ui,sans-serif;font-weight:700;font-size:2.4rem;line-height:1.15;color:var(--text);">
             OE5XRX Remote Station
           </h1>
         </div>
         <div class="type-specimen-block">
-          <span class="type-specimen-label">Heading / H2 &mdash; Space Grotesk 600</span>
-          <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.5rem; line-height: 1.25; color: var(--text);">
+          <span class="type-specimen-label">H2 &mdash; IBM Plex Sans 600 &mdash; 1.5rem</span>
+          <h2 style="font-family:'IBM Plex Sans',system-ui,sans-serif;font-weight:600;font-size:1.5rem;line-height:1.25;color:var(--text);">
             Amateurfunk, ferngesteuert
           </h2>
-        </div>
-        <div class="type-specimen-block">
-          <span class="type-specimen-label">Body &mdash; IBM Plex Sans 400</span>
-          <p style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; font-size: 1rem; line-height: 1.7; color: var(--text);">
-            OE5XRX betreibt eine offene, modular aufgebaute Remote-Station f&uuml;r
-            Funkamateure. &Uuml;ber einen Webbrowser l&auml;sst sich die Station
-            weltweit bedienen &mdash; ohne eigene Hardware vor Ort.
-            Die gesamte Software und Elektronik ist quelloffen.
-          </p>
-        </div>
-        <div class="type-specimen-block">
-          <span class="type-specimen-label">Mono &mdash; IBM Plex Mono 400</span>
-          <p style="font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 0.95rem; line-height: 1.7; color: var(--text);">
-            OE5XRX &middot; 145.500 MHz &middot; JN78<br>
-            0123456789 &middot; &micro; &Omega; &#8596;
-          </p>
         </div>
       </div>
     </div>
 
-    <!-- ── Pairing 2: IBM Plex Sans (durchgehend) + IBM Plex Mono ── -->
+    <!-- ── IBM Plex Sans — Body ── -->
     <div class="type-pairing">
       <div class="type-pairing-header">
-        <span class="type-pairing-number">2</span>
+        <span class="type-pairing-number" style="border-color:var(--primary);color:var(--primary)">B</span>
         <div>
-          <p class="type-pairing-name">Eine Familie</p>
+          <p class="type-pairing-name">IBM Plex Sans &mdash; Body</p>
           <p class="type-pairing-stack">
-            Heading: <strong>IBM Plex Sans 700</strong> &mdash;
-            Body: <strong>IBM Plex Sans 400</strong> &mdash;
-            Mono: <strong>IBM Plex Mono</strong>
+            400 (Flie&szlig;text) &mdash; Einsatz: Paragraphen, UI-Labels, Beschreibungen
           </p>
         </div>
       </div>
 
       <div class="type-specimen">
         <div class="type-specimen-block">
-          <span class="type-specimen-label">Heading / H1 &mdash; IBM Plex Sans 700</span>
-          <h1 style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 700; font-size: 2.4rem; line-height: 1.15; color: var(--text);">
-            OE5XRX Remote Station
-          </h1>
-        </div>
-        <div class="type-specimen-block">
-          <span class="type-specimen-label">Heading / H2 &mdash; IBM Plex Sans 600</span>
-          <h2 style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1.5rem; line-height: 1.25; color: var(--text);">
-            Amateurfunk, ferngesteuert
-          </h2>
-        </div>
-        <div class="type-specimen-block">
-          <span class="type-specimen-label">Body &mdash; IBM Plex Sans 400</span>
-          <p style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; font-size: 1rem; line-height: 1.7; color: var(--text);">
+          <span class="type-specimen-label">Body &mdash; IBM Plex Sans 400 &mdash; 1rem / 1.7</span>
+          <p style="font-family:'IBM Plex Sans',system-ui,sans-serif;font-weight:400;font-size:1rem;line-height:1.7;color:var(--text);">
             OE5XRX betreibt eine offene, modular aufgebaute Remote-Station f&uuml;r
             Funkamateure. &Uuml;ber einen Webbrowser l&auml;sst sich die Station
             weltweit bedienen &mdash; ohne eigene Hardware vor Ort.
             Die gesamte Software und Elektronik ist quelloffen.
           </p>
         </div>
-        <div class="type-specimen-block">
-          <span class="type-specimen-label">Mono &mdash; IBM Plex Mono 400</span>
-          <p style="font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 0.95rem; line-height: 1.7; color: var(--text);">
-            OE5XRX &middot; 145.500 MHz &middot; JN78<br>
-            0123456789 &middot; &micro; &Omega; &#8596;
-          </p>
-        </div>
       </div>
     </div>
 
-    <!-- ── Pairing 3: Fredoka + Inter + JetBrains Mono ── -->
+    <!-- ── IBM Plex Mono — Technical / Code ── -->
     <div class="type-pairing type-pairing--last">
       <div class="type-pairing-header">
-        <span class="type-pairing-number">3</span>
+        <span class="type-pairing-number" style="border-color:var(--accent);color:var(--accent)">M</span>
         <div>
-          <p class="type-pairing-name">Logo-verbunden</p>
+          <p class="type-pairing-name">IBM Plex Mono &mdash; Technisch / Code</p>
           <p class="type-pairing-stack">
-            Heading: <strong>Fredoka 600</strong> (wie Wortmark) &mdash;
-            Body: <strong>Inter</strong> &mdash;
-            Mono: <strong>JetBrains Mono</strong>
+            400 / 600 &mdash; <code style="font-family:var(--font-mono);font-size:0.75rem">'IBM Plex Mono', ui-monospace, monospace</code>
+            &mdash; Einsatz: Frequenzen, Locator, Code, Log-Ausgaben
           </p>
         </div>
       </div>
 
       <div class="type-specimen">
         <div class="type-specimen-block">
-          <span class="type-specimen-label">Heading / H1 &mdash; Fredoka 700</span>
-          <h1 style="font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 2.4rem; line-height: 1.15; color: var(--text);">
-            OE5XRX Remote Station
-          </h1>
-        </div>
-        <div class="type-specimen-block">
-          <span class="type-specimen-label">Heading / H2 &mdash; Fredoka 600</span>
-          <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 1.5rem; line-height: 1.25; color: var(--text);">
-            Amateurfunk, ferngesteuert
-          </h2>
-        </div>
-        <div class="type-specimen-block">
-          <span class="type-specimen-label">Body &mdash; Inter 400</span>
-          <p style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1rem; line-height: 1.7; color: var(--text);">
-            OE5XRX betreibt eine offene, modular aufgebaute Remote-Station f&uuml;r
-            Funkamateure. &Uuml;ber einen Webbrowser l&auml;sst sich die Station
-            weltweit bedienen &mdash; ohne eigene Hardware vor Ort.
-            Die gesamte Software und Elektronik ist quelloffen.
+          <span class="type-specimen-label">Mono 400 &mdash; 0.95rem &mdash; Technische Daten</span>
+          <p style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:400;font-size:0.95rem;line-height:1.7;color:var(--text);">
+            OE5XRX &middot; 145.500 MHz &middot; JN78<br>
+            0123456789 &middot; &micro; &Omega; &#8596;
           </p>
         </div>
         <div class="type-specimen-block">
-          <span class="type-specimen-label">Mono &mdash; JetBrains Mono 400</span>
-          <p style="font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 0.95rem; line-height: 1.7; color: var(--text);">
-            OE5XRX &middot; 145.500 MHz &middot; JN78<br>
-            0123456789 &middot; &micro; &Omega; &#8596;
+          <span class="type-specimen-label">Mono 600 &mdash; Labels / Highlighted values</span>
+          <p style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:600;font-size:0.9rem;line-height:1.7;color:var(--primary);">
+            TX: 145.500 MHz &nbsp;&nbsp; PWR: 5W &nbsp;&nbsp; MODE: FM
           </p>
         </div>
       </div>

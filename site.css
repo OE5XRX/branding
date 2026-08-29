@@ -14,7 +14,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: ui-monospace, "SFMono-Regular", "Cascadia Code", "Fira Code", Menlo, monospace;
+  font-family: var(--font-sans, 'IBM Plex Sans', system-ui, sans-serif);
   line-height: 1.6;
   min-height: 100vh;
 }
