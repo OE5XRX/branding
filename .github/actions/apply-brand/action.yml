@@ -1,0 +1,23 @@
+name: "Apply OE5XRX Brand"
+description: "Kopiert den OE5XRX-Brand-Layer (Farben, Fonts, Logo, Favicon) in eine just-the-docs-Site."
+inputs:
+  dest:
+    description: "Jekyll-Source-Root, in den kopiert wird."
+    required: false
+    default: "."
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+        set -euo pipefail
+        ROOT="$(cd "$GITHUB_ACTION_PATH/../../.." && pwd)"   # branding-Repo-Root
+        DEST="${{ inputs.dest }}"
+        mkdir -p "$DEST/_sass/color_schemes" "$DEST/_includes" "$DEST/assets/fonts"
+        cp "$ROOT/jekyll/_sass/color_schemes/oe5xrx.scss" "$DEST/_sass/color_schemes/"
+        cp "$ROOT/jekyll/_includes/head_custom.html"      "$DEST/_includes/"
+        cp "$ROOT"/jekyll/assets/fonts/*.woff2            "$DEST/assets/fonts/"
+        cp "$ROOT/logo/oe5xrx-horizontal.svg"             "$DEST/assets/oe5xrx-logo.svg"
+        cp "$ROOT/export/favicon.ico"                     "$DEST/favicon.ico"
+        echo "OE5XRX brand layer applied to '$DEST':"
+        ls -R "$DEST/_sass/color_schemes" "$DEST/_includes" "$DEST/assets/fonts" "$DEST/assets/oe5xrx-logo.svg" "$DEST/favicon.ico"
