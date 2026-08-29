@@ -10,12 +10,12 @@
       <path d="M50 38 a16 16 0 0 0 0 26"/>
       <path d="M70 44 a10 10 0 0 1 0 14"/>
       <path d="M78 38 a16 16 0 0 1 0 26"/>
-      <path d="M64 52 L51 108"/>
-      <path d="M64 52 L77 108"/>
-      <path d="M49 108 L79 108"/>
-      <path d="M58.9 74 L69.1 74"/>
-      <path d="M58.9 74 L77 108"/>
-      <path d="M69.1 74 L51 108"/>
+      <path d="M64 52 L46 108"/>
+      <path d="M64 52 L82 108"/>
+      <path d="M44 108 L84 108"/>
+      <path d="M56.9 74 L71.1 74"/>
+      <path d="M56.9 74 L82 108"/>
+      <path d="M71.1 74 L46 108"/>
     </g>
     <circle cx="64" cy="51" r="3.8" fill="currentColor"/>
     <path d="M67 14 L60 28 L65 28 L61 40 L73 26 L67 26 Z" fill="currentColor"/>
