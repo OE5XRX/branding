@@ -1,10 +1,15 @@
-{% comment %} OE5XRX brand — light/dark theme toggle. Canonical: OE5XRX/branding. {% endcomment %}
+{% comment %} OE5XRX brand — light/dark theme toggle. Canonical: OE5XRX/branding.
+   NOTE: JTD renders nav_footer_custom in BOTH the sidebar and the mobile footer,
+   so this markup+script appears twice. The script guards against double-init and
+   binds every .oe5xrx-theme-toggle button (not just the first). {% endcomment %}
 <button type="button" class="oe5xrx-theme-toggle" aria-pressed="false" aria-label="Farbschema hell/dunkel umschalten">
   <span class="oe5xrx-theme-toggle__icon" aria-hidden="true">◐</span>
   <span class="oe5xrx-theme-toggle__label">Dunkel</span>
 </button>
 <script>
   (function () {
+    if (window.__oe5xrxThemeInit) { return; }   // JTD includes this twice — init once
+    window.__oe5xrxThemeInit = true;
     var KEY = 'oe5xrx-theme';
     function schemeLink() {
       return document.querySelector('link[rel="stylesheet"][href*="just-the-docs-"]:not(#jtd-head-nav-stylesheet)');
@@ -22,26 +27,28 @@
         l.setAttribute('href', l.getAttribute('href').replace(/just-the-docs-[a-z0-9-]+\.css/i, 'just-the-docs-' + name + '.css'));
       }
       document.documentElement.setAttribute('data-oe5xrx-theme', dark ? 'dark' : 'light');
-      var b = document.querySelector('.oe5xrx-theme-toggle');
-      if (b) {
-        b.setAttribute('aria-pressed', String(dark));
-        var lbl = b.querySelector('.oe5xrx-theme-toggle__label');
+      var buttons = document.querySelectorAll('.oe5xrx-theme-toggle');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute('aria-pressed', String(dark));
+        var lbl = buttons[i].querySelector('.oe5xrx-theme-toggle__label');
         if (lbl) { lbl.textContent = dark ? 'Hell' : 'Dunkel'; }
       }
     }
+    function onClick() {
+      var d = !isDark();
+      localStorage.setItem(KEY, d ? 'dark' : 'light');
+      apply(d);
+    }
     function init() {
       apply(isDark());
-      var b = document.querySelector('.oe5xrx-theme-toggle');
-      if (b) {
-        b.addEventListener('click', function () {
-          var d = !isDark();
-          localStorage.setItem(KEY, d ? 'dark' : 'light');
-          apply(d);
-        });
+      var buttons = document.querySelectorAll('.oe5xrx-theme-toggle');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', onClick);
       }
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-        if (!localStorage.getItem(KEY)) { apply(e.matches); }
-      });
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var onChange = function (e) { if (!localStorage.getItem(KEY)) { apply(e.matches); } };
+      if (mq.addEventListener) { mq.addEventListener('change', onChange); }
+      else if (mq.addListener) { mq.addListener(onChange); }
     }
     if (document.readyState !== 'loading') { init(); }
     else { document.addEventListener('DOMContentLoaded', init); }
