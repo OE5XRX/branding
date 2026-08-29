@@ -372,6 +372,89 @@ body {
   letter-spacing: 0.04em;
 }
 
+/* ── Typography specimens ────────────────────────────────────────────────── */
+
+.type-intro {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.type-pairing {
+  margin-bottom: 0;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-top: 3.5rem;
+}
+
+.type-pairing--last {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.type-pairing-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.type-pairing-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.type-pairing-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.type-pairing-stack {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.type-specimen {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.type-specimen-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.type-specimen-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* Reset heading margins inside specimen blocks */
+.type-specimen-block h1,
+.type-specimen-block h2 {
+  margin: 0;
+}
+
 /* ── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 860px) {
