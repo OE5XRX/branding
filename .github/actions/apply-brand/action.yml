@@ -9,10 +9,12 @@ runs:
   using: "composite"
   steps:
     - shell: bash
+      env:
+        DEST: ${{ inputs.dest }}
       run: |
         set -euo pipefail
         ROOT="$(cd "$GITHUB_ACTION_PATH/../../.." && pwd)"   # branding-Repo-Root
-        DEST="${{ inputs.dest }}"
+        # DEST kommt jetzt aus der Umgebung, NICHT aus ${{ }}-Interpolation
         mkdir -p "$DEST/_sass/color_schemes" "$DEST/_includes" "$DEST/assets/fonts"
         cp "$ROOT/jekyll/_sass/color_schemes/oe5xrx.scss" "$DEST/_sass/color_schemes/"
         cp "$ROOT/jekyll/_includes/head_custom.html"      "$DEST/_includes/"
